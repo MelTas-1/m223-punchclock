@@ -13,4 +13,4 @@
 3.  Nun muss ein neuer Benutzer hinzugefügt werden;
 4.  mit dem angelegten User sollte man sich anmelden;
 5.  Das verwalten von Benutzern und Einträgen sollte nun möglich sein;
-6.  in der Date dump.sql findet sich ein Skript zum Einfügen von Beispieldaten
+6.  in der Date scrpit.sql findet sich ein Skript zum Einfügen von Beispieldaten
