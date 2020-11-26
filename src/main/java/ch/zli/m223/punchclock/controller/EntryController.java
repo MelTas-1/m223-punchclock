@@ -17,25 +17,29 @@ public class EntryController {
         this.entryService = entryService;
     }
 
+
+    // Hier werden alle Entries ausgegeben
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Entry> getAllEntries() {
         return entryService.findAll();
     }
 
+
+    // Hier wird via einem Post request ein Entry kreiert
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Entry createEntry(@Valid @RequestBody Entry entry) {
         return entryService.createEntry(entry);
     }
 
-    //Änderung eines bestehenden Eintrags
-    //gibt den geänderten Beitrag zurück
+    //Änderung eines  Eintrags
+    //zurückgeben eines Eintrags
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
     public Entry updateEntry(@Valid @RequestBody Entry entry){return entryService.updateEntry(entry);}
 
-    // löschen eines bestehnden Eintrags
+    // löschen eines Eintrags
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
