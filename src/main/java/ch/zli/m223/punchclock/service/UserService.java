@@ -22,7 +22,4 @@ public class UserService {
         userRepoitory.save(user);
     }
 
-    /*public static void main(String[] args){
-        SpringApplication.run(PunchclockApplication.class, args);
-    }*/
 }
