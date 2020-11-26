@@ -8,7 +8,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
+@javax.persistence.Entity
 public class Entry {
 
     @Id
@@ -23,6 +23,7 @@ public class Entry {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @Column(nullable = false)
+
     private LocalDateTime checkOut;
 
     public Long getId() {

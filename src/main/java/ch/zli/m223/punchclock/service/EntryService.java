@@ -21,4 +21,16 @@ public class EntryService {
     public List<Entry> findAll() {
         return entryRepository.findAll();
     }
+
+    //public List<Entry> findAllMine(ApplicationUser user)
+
+    public Entry updateEntry(Entry entry) {return entryRepository.saveAndFlush(entry);}
+
+    public void deleteEntry(Long id) {
+        try {
+            entryRepository.deleteById(id);
+        } catch (Exception e) {
+            System.out.println("error");
+        }
+    }
 }
