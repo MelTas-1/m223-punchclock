@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" id='edge">
+    <script src="userHandling.js" type="application/javascript"></script>
+    <script src="logout.js" type="application/javascript"></script>
+    <title>Punchclock Benutzer-Konfiguration</title>
+</head>
+<body>
+<form name="Logout_UserConf">
+    <button onclick="abmelden();">Abmelden</button></form>
+<button onclick="window.location.href = 'http://localhost:8081/items.html'">Zu den Einträgen</button>
+<form id="userCreat">
+    <p>Bitte geben sie den Benutzernamen ein</p>
+    <input type="text" name="username" id="username" required>
+    <p>Bitte geben sie hier das Passwort ein</p>
+    <input type="password" name="password" id="password" required>
+    <input type="password" name="repw" placeholder="Pw nochmals eingeben" required>
+    <input id="submitButton" type="submit" value="Benutzer erstellen" />
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Benutzername</th>
+    </tr>
+    </thead>
+    <tbody id="display">
+    <tr>
+        <td colspan="2">Loading...</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
